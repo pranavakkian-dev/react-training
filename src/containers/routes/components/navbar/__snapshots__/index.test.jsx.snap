@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar Component rendered successfully! 1`] = `
+<div>
+  <nav>
+    <ul>
+      <li>
+        <a
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          href="/faculty"
+        >
+          Faculty
+        </a>
+      </li>
+      <li>
+        <button
+          type="button"
+        >
+          Logout
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

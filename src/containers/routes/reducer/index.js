@@ -1,9 +1,9 @@
 import initialState from './initialState';
 import {
   LOGIN, RESET,
-} from '../../common/constants/reducerTypes';
+} from '../../../common/constants/reducerTypes';
 
-const Reducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   const { type, payload } = action;
   switch (type) {
     case LOGIN:
@@ -15,4 +15,4 @@ const Reducer = (state = initialState, action) => {
   }
 };
 
-export default Reducer;
+export default reducer;

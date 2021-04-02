@@ -1,23 +1,23 @@
-import { memo, useState } from 'react';
+import { memo, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import Create from './components/create';
+import { handleFacultyReset } from './reducer/actions';
+import Summary from './components/summary';
 
 const Faculty = () => {
-  const [] = useState();
+  const dispatch = useDispatch();
+  const faculties = useSelector((state) => state.FacultyReducer.faculties);
+
+  useEffect(() => () => {
+    dispatch(handleFacultyReset());
+  }, []);
 
   return (
     <>
-      <label htmlFor="username">
-        User Name:
-        <br />
-        <input id="username" value={userName} onChange={(event) => setUserName(event.target.value)} />
-      </label>
+      <Create dispatch={dispatch} />
       <br />
-      <label htmlFor="password">
-        Password:
-        <br />
-        <input id="password" value={password} onChange={(event) => setPassword(event.target.value)} />
-      </label>
       <br />
-      <button type="button" onClick={handleSubmit}>Submit</button>
+      <Summary faculties={faculties} dispatch={dispatch} />
     </>
   );
 };

@@ -1,6 +1,6 @@
 import { memo, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { handleLogin } from '../../redux/reducer/action';
+import { handleLogin } from '../routes/reducer/action';
 
 const Login = () => {
   const dispatch = useDispatch();
