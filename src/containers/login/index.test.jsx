@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import userEvent from '@testing-library/user-event';
 import Login from './index';
-import Store from '../../redux/store';
+import Store from '../../common/redux/store';
 
 describe('Login', () => {
   test('Component render successfully!', () => {

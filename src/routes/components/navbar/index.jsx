@@ -2,7 +2,7 @@ import { memo } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FACULTY_PATH, ROOT_PATH } from '../../../common/constants/routePaths';
-import { handleReset } from '../../../common/reducer/action';
+import { handleReset } from '../../../common/redux/reducer/action';
 
 const NavBar = (props) => {
   const { dispatch } = props;

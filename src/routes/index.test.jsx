@@ -4,7 +4,7 @@ import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 import { Suspense } from 'react';
 import userEvent from '@testing-library/user-event';
-import Store from '../redux/store';
+import Store from '../common/redux/store';
 import Routes from './index';
 
 describe('Routes', () => {

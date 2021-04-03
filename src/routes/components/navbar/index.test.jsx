@@ -4,7 +4,7 @@ import { createMemoryHistory } from 'history';
 import userEvent from '@testing-library/user-event';
 import NavBar from './index';
 import { FACULTY_PATH, ROOT_PATH } from '../../../common/constants/routePaths';
-import { handleReset } from '../../../common/reducer/action';
+import { handleReset } from '../../../common/redux/reducer/action';
 
 describe('NavBar', () => {
   const history = createMemoryHistory();
