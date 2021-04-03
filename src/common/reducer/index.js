@@ -1,7 +1,7 @@
 import initialState from './initialState';
 import {
   LOGIN, RESET,
-} from '../../../common/constants/reducerTypes';
+} from '../constants/reducerTypes';
 
 const reducer = (state = initialState, action) => {
   const { type, payload } = action;

@@ -3,8 +3,8 @@ import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 import userEvent from '@testing-library/user-event';
 import NavBar from './index';
-import { FACULTY_PATH, ROOT_PATH } from '../../../../common/constants/routePaths';
-import { handleReset } from '../../reducer/action';
+import { FACULTY_PATH, ROOT_PATH } from '../../../common/constants/routePaths';
+import { handleReset } from '../../../common/reducer/action';
 
 describe('NavBar', () => {
   const history = createMemoryHistory();

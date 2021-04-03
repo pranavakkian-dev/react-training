@@ -2,12 +2,12 @@ import { lazy, memo, useEffect } from 'react';
 import { Route, Switch, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { FACULTY_PATH, ROOT_PATH } from '../../common/constants/routePaths';
+import { FACULTY_PATH, ROOT_PATH } from '../common/constants/routePaths';
 import NavBar from './components/navbar';
 
-const Login = lazy(() => import('../login'));
-const Home = lazy(() => import('../home'));
-const Faculty = lazy(() => import('../faculty'));
+const Login = lazy(() => import('../containers/login'));
+const Home = lazy(() => import('../containers/home'));
+const Faculty = lazy(() => import('../containers/faculty'));
 
 const Routes = () => {
   const dispatch = useDispatch();

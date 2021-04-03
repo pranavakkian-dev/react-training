@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import Reducer from '../../containers/routes/reducer';
+import Reducer from '../../common/reducer';
 import FacultyReducer from '../../containers/faculty/reducer';
 
 const RootReducer = combineReducers({ Reducer, FacultyReducer });

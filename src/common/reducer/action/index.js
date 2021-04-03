@@ -1,6 +1,6 @@
 import {
   LOGIN, RESET,
-} from '../../../../common/constants/reducerTypes';
+} from '../../constants/reducerTypes';
 
 export const handleLogin = (username) => ({
   type: LOGIN,

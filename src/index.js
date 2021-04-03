@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
 import ErrorBoundary from './common/components/ErrorBoundary';
-import Routes from './containers/routes';
+import Routes from './routes';
 import Store from './redux/store';
 
 ReactDOM.render(
