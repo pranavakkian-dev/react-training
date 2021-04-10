@@ -1,3 +1,23 @@
+# Steps to run locally
+
+1. Install NodeJS LTS version from https://nodejs.org/en/
+2. Open command prompt or terminal and verify installation by running following commands:
+    - `node -v`
+    - `npm -v`
+3. Install yarn by running command:
+    - `npm i -g yarn`
+4. Verify installation by running command:
+    - `yarn -v`
+5. Navigate to project root folder and run this command to install dependencies:
+    - `yarn install --frozen-lockfile`
+6. On successful installation run this command to start the project:
+    - `yarn start`
+7. Open [http://localhost:3000](http://localhost:3000) in your browser.
+8. To run all the unit test run this command:
+    - `yarn test`
+9. To build project run this command:
+    - `yarn build`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
