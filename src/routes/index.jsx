@@ -15,7 +15,7 @@ const Routes = () => {
   const loggedIn = useSelector((state) => state.Reducer.loggedIn);
 
   useEffect(() => {
-    if (!loggedIn)history.push(ROOT_PATH);
+    if (!loggedIn) history.push(ROOT_PATH);
   }, [loggedIn]);
 
   return loggedIn ? (

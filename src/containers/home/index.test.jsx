@@ -5,11 +5,14 @@ import Store from '../../common/redux/store';
 
 describe('Home', () => {
   test('Component rendered successfully!', () => {
+    // When
     const { container } = render(
       <Provider store={Store}>
         <Home />
       </Provider>,
     );
+
+    // Then
     expect(container).toMatchSnapshot();
   });
 });

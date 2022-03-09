@@ -10,6 +10,7 @@ import Routes from './index';
 describe('Routes', () => {
   const history = createMemoryHistory();
   test('Component rendered successfully!', () => {
+    // When
     const { container } = render(
       <Router history={history}>
         <Provider store={Store}>
@@ -19,10 +20,13 @@ describe('Routes', () => {
         </Provider>
       </Router>,
     );
+
+    // Then
     expect(container).toMatchSnapshot();
   });
 
   test('User logged in and navigated to home page successfully!', async () => {
+    // When
     render(
       <Router history={history}>
         <Provider store={Store}>
@@ -32,6 +36,8 @@ describe('Routes', () => {
         </Provider>
       </Router>,
     );
+
+    // Then
     expect(screen.queryByRole('heading', { name: 'Welcome, admin' })).not.toBeInTheDocument();
     userEvent.type(screen.getByRole('textbox', { name: 'User Name:' }), 'admin');
     userEvent.type(screen.getByLabelText('Password:'), 'admin');
@@ -41,6 +47,7 @@ describe('Routes', () => {
   });
 
   test('User navigated to crate faculty page successfully!', async () => {
+    // When
     render(
       <Router history={history}>
         <Provider store={Store}>
@@ -51,11 +58,14 @@ describe('Routes', () => {
       </Router>,
     );
     userEvent.click(screen.getByRole('link', { name: 'Faculty' }));
+
+    // Then
     await screen.findByRole('heading', { name: 'Add Faculty' });
     expect(screen.getByRole('heading', { name: 'Add Faculty' })).toBeInTheDocument();
   });
 
   test('User navigated back to home page successfully!', () => {
+    // When
     render(
       <Router history={history}>
         <Provider store={Store}>
@@ -66,10 +76,13 @@ describe('Routes', () => {
       </Router>,
     );
     userEvent.click(screen.getByRole('link', { name: 'Home' }));
+
+    // Then
     expect(screen.getByRole('heading', { name: 'Welcome, admin' })).toBeInTheDocument();
   });
 
   test('User logged out and navigated to login page successfully!', () => {
+    // When
     render(
       <Router history={history}>
         <Provider store={Store}>
@@ -80,6 +93,8 @@ describe('Routes', () => {
       </Router>,
     );
     userEvent.click(screen.getByRole('button', { name: 'Logout' }));
+
+    // Then
     expect(screen.getByRole('textbox', { name: 'User Name:' })).toBeInTheDocument();
     expect(screen.getByLabelText('Password:')).toBeInTheDocument();
   });
